@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+            min-height: 100vh;
+        }
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+        }
+        .sidebar h2 {
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            margin: 15px 0;
+            display: block;
+            padding: 10px;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        /* Main Content Styles */
+        .main-content {
+            margin-left: 250px;
+            padding: 40px;
+            width: 100%;
+        }
+        .header {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 28px;
+            color: #333;
+        }
+        .header p {
+            font-size: 18px;
+            color: #555;
+        }
+        .stats-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .stat-box {
+            background-color: white;
+            padding: 20px;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+        .stat-box h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .stat-box p {
+            font-size: 18px;
+            color: #777;
+        }
+        .recent-activity {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        .recent-activity h3 {
+            margin-bottom: 15px;
+            font-size: 24px;
+            color: #333;
+        }
+        .activity-list {
+            list-style: none;
+        }
+        .activity-list li {
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .activity-list li p {
+            font-size: 16px;
+            color: #555;
+        }
+        .activity-list li .time {
+            font-size: 14px;
+            color: #aaa;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+                padding: 15px;
+            }
+            .main-content {
+                margin-left: 200px;
+                padding: 20px;
+            }
+            .stats-container {
+                flex-direction: column;
+            }
+            .stat-box {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Messages</a>
+        <a href="#">Logout</a>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h1>Welcome Back, John Doe</h1>
+            <p>Here's an overview of your account and activity</p>
+        </div>
+        <div class="stats-container">
+            <div class="stat-box">
+                <h3>Profile Views</h3>
+                <p>342</p>
+            </div>
+            <div class="stat-box">
+                <h3>Messages</h3>
+                <p>23 New</p>
+            </div>
+            <div class="stat-box">
+                <h3>Tasks Completed</h3>
+                <p>58%</p>
+            </div>
+        </div>
+        <div class="recent-activity">
+            <h3>Recent Activity</h3>
+            <ul class="activity-list">
+                <li>
+                    <p>Completed a task: Design the landing page</p>
+                    <span class="time">5 minutes ago</span>
+                </li>
+                <li>
+                    <p>Received a message from Alice</p>
+                    <span class="time">20 minutes ago</span>
+                </li>
+                <li>
+                    <p>Updated profile information</p>
+                    <span class="time">1 hour ago</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
